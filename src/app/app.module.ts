@@ -9,6 +9,9 @@ import { SearchInputComponent } from './search-input/search-input.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { FoodResultComponent } from './search-results/food-result/food-result.component';
 
+import { StoreModule } from '@ngrx/store';
+import { reducer } from './store/reducer';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +23,8 @@ import { FoodResultComponent } from './search-results/food-result/food-result.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot(reducer),
   ],
   providers: [],
   bootstrap: [AppComponent]
